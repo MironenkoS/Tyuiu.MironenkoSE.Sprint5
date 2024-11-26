@@ -8,7 +8,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task3.V17.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            double calculatedResult = 123;
+            double calculatedResult = 2.4 * Math.Pow(x, 3) + 0.4 * Math.Pow(x, 2) - 1.4 * x + 4.1; 
 
 
             int intResult = (int)Math.Round(calculatedResult);
