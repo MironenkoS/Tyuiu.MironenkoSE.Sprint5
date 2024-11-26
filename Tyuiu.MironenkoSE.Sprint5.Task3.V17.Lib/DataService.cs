@@ -29,8 +29,8 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task3.V17.Lib
             byte[] fileBytes = File.ReadAllBytes(filePath);
             string base64String = Convert.ToBase64String(fileBytes);
 
-            
-            return tx;
+
+            return filePath;
         }
     }
 }
