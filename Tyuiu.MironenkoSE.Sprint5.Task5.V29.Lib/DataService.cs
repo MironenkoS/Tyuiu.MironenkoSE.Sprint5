@@ -8,7 +8,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task5.V29.Lib
         public double LoadFromDataFile(string path)
         {
             double res = 0;
-            int res2 = 40;
+            int res2 = 11;
             using (StreamReader reader = new StreamReader(path))
             {
                 string? line;
