@@ -18,7 +18,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task3.V17.Lib
 
 
             string filePath = Path.Combine(tempPath, "OutPutFileTask3.bin");
-            string tx = MzMzMzMTUUA=;
+            string tx = "MzMzMzMTUUA=";
 
             using (BinaryWriter writer = new BinaryWriter(File.Open(filePath, FileMode.Create)))
             {
