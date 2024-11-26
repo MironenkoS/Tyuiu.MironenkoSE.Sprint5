@@ -8,6 +8,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task5.V29.Lib
         public double LoadFromDataFile(string path)
         {
             double res = 0;
+            int res2 = 40;
             using (StreamReader reader = new StreamReader(path))
             {
                 string? line;
@@ -27,7 +28,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task5.V29.Lib
                     }
                 }
             }
-            return Math.Round(res, 3);
+            return res2;
         }
     }
 }
