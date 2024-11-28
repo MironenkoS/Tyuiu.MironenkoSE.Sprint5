@@ -6,21 +6,19 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task7.V17.Lib
     {
         public string LoadDataAndSave(string path) 
         {
-            string str = "";
-            using (StreamReader sr = new StreamReader(path))
+            string SavePath = Path.Combine(new string[] { Path.GetTempPath(), "OutPutDataFileTask7V16.txt" });
+            FileInfo fileInfo = new FileInfo(SavePath);
+            if (fileInfo.Exists) fileInfo.Delete();
+
+            string[] words = File.ReadAllText(path).Split(" ");
+            for (int i = 0; i < words.Length; i++)
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    line = line.Replace("нн", "");
-                    str += line;
-                }
+                if (words[i].Length == 2) words[i] = "XY";
             }
-            string NewPath = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V17.txt");
-            FileInfo f = new FileInfo(NewPath);
-            if (f.Exists) File.Delete(NewPath);
-            File.AppendAllText(NewPath, str);
-            return NewPath;
+            string newFile = string.Join(" ", words);
+            File.WriteAllText(SavePath, newFile);
+            return SavePath;
+
 
         }
     }
