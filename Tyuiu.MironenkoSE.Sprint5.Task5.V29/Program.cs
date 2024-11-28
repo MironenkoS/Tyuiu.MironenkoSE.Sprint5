@@ -23,7 +23,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task5.V29
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
 
-            string path = @"C:\Users\alina\source\repos\Tyuiu.GalimovaAS.Sprint5\DataSprint5\InPutDataFileTask5V10.txt";
+            string path = @"C:\Users\664\source\repos\MironenkoSE.Sprint5\DataSprint5\InPutDataFileTask5V10.txt";
             Console.WriteLine($"Данные находятся в файле: {path}");
 
             Console.WriteLine();
