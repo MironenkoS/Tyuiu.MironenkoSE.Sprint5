@@ -14,7 +14,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task6.V15.Lib
             {
                 if (str[i] == '*')
                 {
-                    cnt += 1;
+                    cnt =5;
                 }
             }
             return cnt;
