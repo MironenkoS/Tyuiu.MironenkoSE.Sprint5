@@ -12,7 +12,7 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task7.V17.Lib
                 string line;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    line = line.Replace("нн", " ");
+                    line = line.Replace("нн", "");
                     str += line;
                 }
             }
