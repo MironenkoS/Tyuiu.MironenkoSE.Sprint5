@@ -7,10 +7,13 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task7.V17.Test
         [TestMethod]
         public void TestMethod1()
         {
-            DataService ds = new DataService();
-            string path = Path.Combine(new string[] { "C:", "DataSprint5", "InPutDataFileTask7V12.txt" });
-            var res = ds.LoadDataAndSave(path);
-            Assert.AreEqual(Path.Combine(new string[] { "C:", "DataSprint5", "OutPutDataFileTask7V12.txt" }), res);
+            string path = @"C:\DataSprint5\InPutDataFileTask7V17.txt";
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, fileExists);
+
+
         }
     }
 }

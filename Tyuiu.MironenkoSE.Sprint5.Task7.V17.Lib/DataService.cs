@@ -4,32 +4,23 @@ namespace Tyuiu.MironenkoSE.Sprint5.Task7.V17.Lib
 {
     public class DataService : ISprint5Task7V17
     {
-        public string LoadDataAndSave(string path)
+        public string LoadDataAndSave(string path) 
         {
-            string filePath = Path.Combine(new string[] { Path.GetTempPath(), "OutPutDataFileTask7V15.txt" });
-            FileInfo fileInfo = new FileInfo(filePath);
-            bool fileExists = fileInfo.Exists;
-            if (fileExists)
+            string str = "";
+            using (StreamReader sr = new StreamReader(path))
             {
-                File.Delete(filePath);
-            }
-            string n = File.ReadAllText(path);
-            string[] array = n.Split(' ');
-            string[] newarray = new string[array.Length];
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i].Length != 2)
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    newarray[i] = array[i] + " ";
-                }
-                else
-                {
-                    newarray[i] = "";
+                    line = line.Replace("нн", " ");
+                    str += line;
                 }
             }
-            string result = string.Join("", newarray);
-            File.AppendAllText(filePath, result);
-            return filePath;
+            string NewPath = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V17.txt");
+            FileInfo f = new FileInfo(NewPath);
+            if (f.Exists) File.Delete(NewPath);
+            File.AppendAllText(NewPath, str);
+            return NewPath;
 
         }
     }
